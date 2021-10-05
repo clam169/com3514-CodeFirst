@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace CodeFirst.Models
 {
     public class Player
@@ -8,7 +10,7 @@ namespace CodeFirst.Models
         public string Position { get; set; }
         
         public string TeamName { get; set; }
-
+        [ForeignKey("TeamName")]
         public Team Team { get; set; }
     }
 }
